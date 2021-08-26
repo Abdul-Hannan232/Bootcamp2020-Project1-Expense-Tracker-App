@@ -1,13 +1,154 @@
-body {
+/* ALL */
+*{
+  /* width: 100%; */
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  /* text-align: center; */
+  /* background-color: rgb(248, 248, 248); */
+  /* max-height: 100vh; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+#root{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* max-height: 100vh; */
+}
+
+
+
+/* App Component */
+.app{
+  width: 25vw;
+  height: 100vh;
+}
+
+
+
+/* Summary Component */
+.summary{
+  background-color: white;
+  /* width: 100%; */
+  height: 12vh;
+  display: flex;
+  /* justify-content: center; */
+  border: 1px solid rgb(214, 214, 214);
+  border-radius: 4px;
+}
+
+.income, .expense{
+  width: 100%;
+}
+.income, .expense, .pipe {
+  /* width: 100%; */
+  /* height: 12vh; */
+  display: flex;
+  justify-content:center;
+  align-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.gold{
+  color: rgb(214, 158, 15);
+  width: 100%;
+}
+.blue{
+  color: rgb(105, 205, 238);
+  width: 100%;
+}
+
+
+
+
+
+/* History Component */
+
+.list{
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.list li{
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.list li.plus{
+  border-right: 4px solid green;
+}
+
+.list li.plus:hover{
+  background-color: green;
+  color: white;
+}
+
+.list li.minus{
+  border-right: 4px solid red;
+}
+
+.list li.minus:hover{
+  background-color: red;
+  color: white;
+}
+
+.delete-btn{
+  cursor: pointer;
+  background-color: rgb(165, 0, 0);
+  border: none;
+  color: white;
+  font-size: 15px;
+  width: 12%;
+  padding: 3px 2px;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn{
+  opacity: 1;
+}
+
+
+
+/* New Transaction Component */
+.description, .amount {
+  width: 100%;
+  padding: 4% 0;
+  border: 1px solid rgb(214, 214, 214);
+  border-radius: 4px;
+  font-size: medium;
+}
+
+.expense_Sign{
+  font-size: x-small;
+}
+
+.btn{
+  width: 100%;
+  padding: 3% 0%;
+  background-color:  #7797ee;
+  color: white;
+  border: none;
+  border-radius: 1px;
+}
+.btn:hover{
+  background-color:  #547ae2;
+}
+.btn:active{
+  background-color: #182957;
 }
