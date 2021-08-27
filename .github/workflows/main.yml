@@ -1,0 +1,35 @@
+name: ReactJS Expense Tracker App
+
+on:
+  push:
+    branches: [ master ]
+    
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js Environment
+        run: actions/setup-node@v2-beta
+        with:
+          version: 14
+
+
+      - name: Install Dependencies
+        run: npm install
+        
+      - name: Create Build
+        run: npm run build
+        
+      - name: Install Surge
+        run: npm install -g surge
+        
+      - name: Deploy on Surge
+        run: surge ./build http://project1-expense-tracker-app-abdul-hannan.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
