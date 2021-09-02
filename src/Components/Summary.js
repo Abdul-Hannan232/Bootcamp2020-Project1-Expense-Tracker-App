@@ -27,7 +27,7 @@ const Summary = () => {
                     <h4 className="gold">{incomeAmount}</h4> 
                 </div>
 
-                    <div className="pipe">  |  </div>
+                    <div className="pipe">|</div>
 
                 <div className="expense"> 
                     <h4> EXPENSE </h4> 
